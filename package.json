@@ -1,0 +1,50 @@
+{
+    "name": "fastboard-server",
+    "version": "1.0.0",
+    "description": "Fastboard Server API and utilities.",
+    "scripts": {
+        "start": "npm run build && npx node build/server.js",
+        "build": "npx tsc && npm run copy-files",
+        "copy-files": "cp -Rf src/data/ build/data/",
+        "watch": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'npx ts-node src/server.ts'",
+        "test": "jest",
+        "test-watch": "nodemon --watch '{src,test}/**' --ext 'ts,json' --exec 'npx jest'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/p3000/fastboard-server.git"
+    },
+    "keywords": [
+        "asu shares",
+        "cds hooks"
+    ],
+    "author": "Preston Lee",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/p3000/fastboard-server/issues"
+    },
+    "homepage": "https://github.com/p3000/fastboard-server#readme",
+    "dependencies": {
+        "ajv": "^8.17.1",
+        "axios": "^1.7.9",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "express-basic-auth": "^1.2.1",
+        "jsonpath-plus": "^10.2.0",
+        "nodemon": "^3.1.9",
+        "rxjs": "^7.8.1",
+        "supertest": "^7.0.0",
+        "ts-jest": "^29.2.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7",
+        "uuid": "^11.0.5"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
+        "@types/fhir": "^0.0.41",
+        "@types/jest": "^29.5.14",
+        "@types/uuid": "^10.0.0"
+    }
+}

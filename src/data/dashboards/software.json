@@ -1,0 +1,871 @@
+{
+	"$schema": "https://fastboard.skycapp.com/assets/schemas/dashboard.json",
+	"dashboard_name": "AcmeCo2",
+	"file_name": "software.json",
+	"updated_at": "2028-08-08",
+	"settings": {
+		"editable": true
+	},
+	"workstreams": [
+		{
+			"id": "data-quality-management",
+			"name": "Management Restructure",
+			"target_date": "September 1st, 2028",
+			"target_date_label": "Reorg Complete",
+			"responsible_name": "Daniel Davidson",
+			"responsible_details": "August ‘28 through February ’29",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "green"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "green"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "green"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Updates",
+			"accomplishments": [
+				"Executive team all on board",
+				"Sponsor transitioned to new leadership",
+				"Complete the build and deployment for the data quality writer Camel Route​",
+				"Set up auto deployment for Data Quality Writer Camel Route"
+			],
+			"milestones": [
+				{
+					"name": "Mission Statement",
+					"stage": "done"
+				},
+				{
+					"name": "Committee",
+					"stage": "done"
+				},
+				{
+					"name": "Decisions",
+					"stage": "doing"
+				},
+				{
+					"name": "Execution",
+					"stage": "do"
+				},
+				{
+					"name": "Evaluation",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": [
+				"Need to check in weekly "
+			],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 78
+			},
+			"assignments_title": "Assignments",
+			"assignments": [],
+			"resolutions_title": "Resolutions",
+			"resolutions": []
+		},
+		{
+			"id": "89a2c865-b03d-4405-b7da-8b830640fdb4",
+			"name": "Product MVP Launch",
+			"target_date": "January 1st, 2028",
+			"target_date_label": "Go Live",
+			"responsible_name": "AppCo",
+			"responsible_details": "August ‘28 through February ’29",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "green"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "green"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "red"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Updates",
+			"accomplishments": [
+				"Sandbox deployment​",
+				"Complete development of v1 API",
+				"Created QA process",
+				"Set up CI/CD pipelines"
+			],
+			"milestones": [
+				{
+					"name": "Kickoff",
+					"stage": "done"
+				},
+				{
+					"name": "Design",
+					"stage": "done"
+				},
+				{
+					"name": "Development",
+					"stage": "doing"
+				},
+				{
+					"name": "Testing",
+					"stage": "do"
+				},
+				{
+					"name": "UAT",
+					"stage": "do"
+				},
+				{
+					"name": "Production",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": [
+				"None"
+			],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 0
+			},
+			"assignments_title": "Assignments",
+			"assignments": [
+				{
+					"summary": "Reassign engineering resources",
+					"priority": {
+						"level": 90,
+						"color": "yellow"
+					}
+				},
+				{
+					"summary": "Make Alice to product owner",
+					"priority": {
+						"level": 0,
+						"color": "green"
+					}
+				}
+			],
+			"resolutions_title": "Resolutions",
+			"resolutions": [
+				{
+					"summary": "Alice promoted!"
+				}
+			]
+		},
+		{
+			"id": "ed0ae180-7e7c-4d69-afbc-a0f2c13a1d7a",
+			"name": "Legacy License Migration",
+			"target_date": "November 3rd, 2028",
+			"target_date_label": "Go Live",
+			"responsible_name": "Daniel Davidson",
+			"responsible_details": "August ‘28 through February ’29",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "red"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "red"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "yellow"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Updates",
+			"accomplishments": [
+				"Announced decommissioning",
+				"Published migration plan​",
+				"Resolved all customer contract issues",
+				"Placed all affected employees to other teams"
+			],
+			"milestones": [
+				{
+					"name": "Kickoff",
+					"stage": "done"
+				},
+				{
+					"name": "Design",
+					"stage": "doing"
+				},
+				{
+					"name": "System Configuration",
+					"stage": "do"
+				},
+				{
+					"name": "Test",
+					"stage": "do"
+				},
+				{
+					"name": "Notify Customers",
+					"stage": "do"
+				},
+				{
+					"name": "Deploy",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": [],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 0
+			},
+			"assignments_title": "Assignments",
+			"assignments": [
+				{
+					"summary": "Assign staff",
+					"priority": {
+						"level": 90,
+						"color": "red"
+					}
+				}
+			],
+			"resolutions_title": "Resolutions",
+			"resolutions": [
+				{
+					"summary": "Executive approved of the model"
+				},
+				{
+					"summary": "Received technical buy-in"
+				}
+			]
+		},
+		{
+			"id": "client-registry-service",
+			"name": "In-House Customer Service",
+			"target_date": "September 1st, 2028",
+			"target_date_label": "Data-In Go Live",
+			"responsible_name": "Daniel Davidson",
+			"responsible_details": "August ‘28 through February ’29",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "yellow"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "green"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "yellow"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Status Updates",
+			"accomplishments": [
+				"Great CSR manager found",
+				"Reasonable timeline established",
+				"Estimated 25% annual cost reduction"
+			],
+			"milestones": [
+				{
+					"name": "Recruite Manager",
+					"stage": "done"
+				},
+				{
+					"name": "Establish Plan",
+					"stage": "done"
+				},
+				{
+					"name": "Recruit Team",
+					"stage": "doing"
+				},
+				{
+					"name": "Train Team",
+					"stage": "do"
+				},
+				{
+					"name": "Notify Contracts",
+					"stage": "do"
+				},
+				{
+					"name": "Switch Phones",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": [
+				"Contractor not turning over training materials",
+				"Escalated to Acme PM",
+				"Pending internal Acme meetings"
+			],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 82
+			},
+			"assignments_title": "Assignments",
+			"assignments": [
+				{
+					"summary": "PCR health check endpoint.",
+					"priority": {
+						"level": 14,
+						"color": "yellow"
+					}
+				}
+			],
+			"resolutions_title": "Recent Resolutions",
+			"resolutions": []
+		},
+		{
+			"id": "ccc50658-e8ad-46a6-ab17-f0566ad0e16a",
+			"name": "Data Ingress",
+			"target_date": "November 3rd, 2028",
+			"target_date_label": "Data-In Go Live",
+			"responsible_name": "Daniel Davidson",
+			"responsible_details": "August ‘28 through February ’29",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "green"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "green"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "green"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Updates",
+			"accomplishments": [
+				"Verified completed of all v1 data sources​",
+				"Completed model excercises for 80% of known data",
+				"Timelines in place to complete remaining transform excercises",
+				"Test data received and integrated into regression test suites"
+			],
+			"milestones": [
+				{
+					"name": "Scheduling",
+					"stage": "done"
+				},
+				{
+					"name": "Informatics",
+					"stage": "doing"
+				},
+				{
+					"name": "Integration",
+					"stage": "do"
+				},
+				{
+					"name": "Testing",
+					"stage": "do"
+				},
+				{
+					"name": "Deployment",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": ["Uncertain budget"],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 0
+			},
+			"assignments_title": "Assignments",
+			"assignments": [],
+			"resolutions_title": "Resolutions",
+			"resolutions": []
+		},
+		{
+			"id": "3437a667-2130-4424-8862-eb30ae44ed23",
+			"name": "Report Redesign",
+			"target_date": "January 5th, 2028",
+			"target_date_label": "Data-In Go Live",
+			"responsible_name": "Daniel Davidson",
+			"responsible_details": "August ‘23 through February ’24",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "green"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "green"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "green"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Updates",
+			"accomplishments": [
+				"DQS Deployment​",
+				"Complete development of Java API to craft JSON representation of errors​",
+				"Complete the build and deployment for the data quality writer Camel Route​",
+				"Set up auto deployment for Data Quality Writer Camel Route"
+			],
+			"milestones": [
+				{
+					"name": "Kickoff",
+					"stage": "doing"
+				},
+				{
+					"name": "Design",
+					"stage": "do"
+				},
+				{
+					"name": "Develop",
+					"stage": "do"
+				},
+				{
+					"name": "Test",
+					"stage": "do"
+				},
+				{
+					"name": "Ready",
+					"stage": "do"
+				},
+				{
+					"name": "Operate",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": ["No major risks."],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 0
+			},
+			"assignments_title": "Assignments",
+			"assignments": [],
+			"resolutions_title": "Resolutions",
+			"resolutions": []
+		},
+		{
+			"id": "0b35f93c-b63f-4921-a890-086fe9e6e239",
+			"name": "Integrated Monitoring",
+			"target_date": "November 3rd, 2028",
+			"target_date_label": "Go Live",
+			"responsible_name": "Daniel Davidson",
+			"responsible_details": "August ‘23 through February ’24",
+			"leads": [
+				{
+					"title": "Acme Leads",
+					"name": "Alice Anderson, Bob Barker"
+				},
+				{
+					"title": "Remote Leads",
+					"name": "Charlie Chaplan"
+				}
+			],
+			"statuses": {
+				"overall": {
+					"name": "Overall Status",
+					"color": "green"
+				},
+				"timeline": {
+					"name": "Timeline",
+					"color": "green"
+				},
+				"budget": {
+					"name": "Budget",
+					"color": "green"
+				},
+				"blockers": {
+					"name": "Blockers",
+					"color": "green"
+				}
+			},
+			"accomplishments_title": "Accomplishments & Updates",
+			"accomplishments": [
+				"CI/CD pipelines created",
+				"Staffing identified"
+			],
+			"milestones": [
+				{
+					"name": "Kickoff",
+					"stage": "doing"
+				},
+				{
+					"name": "Design",
+					"stage": "do"
+				},
+				{
+					"name": "Develop",
+					"stage": "do"
+				},
+				{
+					"name": "Test",
+					"stage": "do"
+				},
+				{
+					"name": "Ready",
+					"stage": "do"
+				},
+				{
+					"name": "Operate",
+					"stage": "do"
+				}
+			],
+			"risks_title": "Risks & Mitigations",
+			"risks": [
+				"Need estimate of available development hours"
+			],
+			"risks_temperature": {
+				"name": "Action Required",
+				"value": 20
+			},
+			"assignments_title": "Assignments",
+			"assignments": [],
+			"resolutions_title": "Resolutions",
+			"resolutions": []
+		}
+	],
+	"progress_summaries": [
+		{
+			"id": "ps1",
+			"name": "Active Projects",
+			"track_groups": [
+				{
+					"name": "Core Infrastructure",
+					"tracks": [
+						{
+							"name": "Cloud IaaS Migration",
+							"caption": "Moving to AWS from regional data centers",
+							"baseline": {},
+							"overlays": [
+								{
+									"color": "yellow",
+									"icon": "exclamation-triangle",
+									"percentage": 60
+								},
+								{
+									"color": "green",
+									"icon": "check",
+									"percentage": 50
+								}
+							],
+							"stages": [
+								{
+									"name": "Planning",
+									"caption": "Consultants"
+								},
+								{
+									"name": "Re-Staffing",
+									"caption": "HR"
+								},
+								{
+									"name": "Execution",
+									"caption": "3-6 months"
+								},
+								{
+									"name": "Switchover",
+									"caption": "All Hands"
+								},
+								{
+									"name": "Cost Optimization",
+									"caption": "CFO/CTO"
+								}
+							],
+							"statuses": [
+								{
+									"color": "yellow",
+									"text": "Budget Constraints"
+								},
+								{
+									"color": "yellow",
+									"text": "Pending Compliance Review"
+								},
+								{
+									"color": "yellow",
+									"text": "Security Auditing"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Sensitivity Analyses",
+					"tracks": [
+						{
+							"name": "Medications",
+							"caption": "(MED)",
+							"baseline": {
+								"color": "red"
+							},
+							"overlays": [
+								{
+									"color": "yellow",
+									"icon": "cone-striped",
+									"percentage": 60
+								},
+								{
+									"color": "green",
+									"icon": "check",
+									"percentage": 30
+								}
+							],
+							"stages": [
+								{
+									"name": "Discovery",
+									"caption": "Phoenix Team"
+								},
+								{
+									"name": "Design & Plan",
+									"caption": "Phoenix Team"
+								},
+								{
+									"name": "Implementation",
+									"caption": "Corporate"
+								},
+								{
+									"name": "Go-Live",
+									"caption": ""
+								}
+							],
+							"statuses": [
+								{
+									"color": "yellow",
+									"text": "Contractor Delays"
+								},
+								{
+									"color": "red",
+									"text": "Regional Evacuations"
+								}
+							]
+						},
+						{
+							"name": "Genomics",
+							"caption": "(GEN)",
+							"baseline": {
+								"color": "green"
+							},
+							"overlays": [
+								{
+									"color": "green",
+									"icon": "check-all",
+									"percentage": 40
+								},
+								{
+									"color": "green",
+									"icon": "check",
+									"percentage": 20
+								}
+							],
+							"stages": [
+								{
+									"name": "Discovery",
+									"caption": "Phoenix Team"
+								},
+								{
+									"name": "Design & Plan",
+									"caption": "Phoenix Team"
+								},
+								{
+									"name": "Implementation",
+									"caption": "Corporate"
+								},
+								{
+									"name": "Go-Live",
+									"caption": ""
+								}
+							],
+							"statuses": []
+						},
+						{
+							"name": "Substance Use",
+							"caption": "(SUD)",
+							"baseline": {
+								"color": "yellow"
+							},
+							"overlays": [
+								{
+									"color": "yellow",
+									"icon": "exclamation-triangle",
+									"percentage": 60
+								},
+								{
+									"color": "green",
+									"icon": "check",
+									"percentage": 30
+								}
+							],
+							"stages": [
+								{
+									"name": "",
+									"caption": "Phoenix Team"
+								},
+								{
+									"name": "",
+									"caption": "Phoenix Team"
+								},
+								{
+									"name": "",
+									"caption": "Corporate"
+								},
+								{
+									"name": "",
+									"caption": ""
+								}
+							],
+							"statuses": []
+						},
+						{
+							"name": "Mental Health",
+							"caption": "(MH)",
+							"baseline": {
+								"color": ""
+							},
+							"overlays": [
+								{
+									"color": "yellow",
+									"icon": "exclamation-triangle",
+									"percentage": 70
+								},
+								{
+									"color": "green",
+									"icon": "check",
+									"percentage": 20
+								}
+							],
+							"stages": [
+								{
+									"name": "",
+									"caption": "Task #379"
+								},
+								{
+									"name": "",
+									"caption": "Task #379"
+								},
+								{
+									"name": "",
+									"caption": "Task #375"
+								},
+								{
+									"name": "",
+									"caption": ""
+								}
+							],
+							"statuses": [
+								{
+									"color": "green",
+									"text": "Planning for implementation"
+								}
+							]
+						}
+					]
+				}
+			],
+			"planned_milestones": [
+				{
+					"name": "October 2028",
+					"items": [
+						"Customer sandboxes migrated",
+						"Ingestion of sales data",
+						"Initial cost analysis"
+					]
+				},
+				{
+					"name": "February 2029",
+					"items": [
+						"MVP Release for GreatApp"
+					]
+				},
+				{
+					"name": "March 2029",
+					"items": [
+						"Customer validation testing"
+					]
+				},
+				{
+					"name": "May 2029",
+					"items": [
+						"Open beta release",
+						"Large marketing push"
+					]
+				}
+			]
+		}
+	]
+}

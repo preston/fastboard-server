@@ -1,0 +1,41 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://fastboard.skycapp.com/assets/schemas/settings.json",
+	"title": "Fastboard Application Settings Schema",
+	"description": "The schema definitions used to configure Fastboard settings.",
+	"type": "object",
+	"required": [
+		"experimental",
+		"developer",
+		"server_url",
+		"server_username",
+		"server_password"
+	],
+	"properties": {
+		"experimental": {
+			"type": "boolean",
+			"description": "Whether experimental features should be enabled.",
+			"default": false
+		},
+		"developer": {
+			"type": "boolean",
+			"description": "Whether development tools and messages should be enabled.",
+			"default": false
+		},
+		"server_url": {
+			"type": "string",
+			"description": "Optional URL of a Fastboard server.",
+			"default": ""
+		},
+		"server_username": {
+			"type": "string",
+			"description": "Optional username for the Fastboard server.",
+			"default": ""
+		},
+		"server_password": {
+			"type": "string",
+			"description": "Optional password for the Fastboard server.",
+			"default": ""
+		}
+	}
+}

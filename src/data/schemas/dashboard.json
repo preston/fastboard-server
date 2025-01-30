@@ -1,0 +1,282 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://fastboard.skycapp.com/assets/schemas/dashboard.json",
+    "title": "Fastboard Data Schema",
+    "description": "The data schema definitions for Fastboard data files.",
+    "type": "object",
+    "required": [
+        "dashboard_name",
+        "file_name",
+        "updated_at",
+        "workstreams"
+    ],
+    "properties": {
+        "settings": {
+            "type": "object",
+            "description": "These are REQUESTS of an application, and may be ignored or altered if not protected.",
+            "properties": {
+                "editable": {
+                    "type": "boolean",
+                    "description": "Whether or not data editing is supposed to be allowed.",
+                    "default": true
+                }
+            }
+        },
+        "dashboard_name": {
+            "type": "string",
+            "description": "The top-level document name.",
+            "minLength": 1
+        },
+        "file_name": {
+            "type": "string",
+            "description": "The preferred file name.",
+            "minLength": 1
+        },
+        "updated_at": {
+            "type": "string",
+            "description": "Human-readable date string."
+        },
+        "workstreams": {
+            "type": "array",
+            "description": "Ordered list of individual workstream status objects.",
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "target_date",
+                    "target_date_label",
+                    "responsible_name",
+                    "responsible_details",
+                    "leads",
+                    "statuses",
+                    "accomplishments_title",
+                    "accomplishments",
+                    "milestones",
+                    "risks_title",
+                    "risks",
+                    "risks_temperature",
+                    "assignments",
+                    "resolutions"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Either a UUID or alphanumeric (plus hyphen) string used for URL slugs. Must be unique within the document.",
+                        "minLength": 1,
+                        "pattern": "^([0-9a-z-])+$"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Human-readable workstream name."
+                    },
+                    "target_date": {
+                        "type": "string"
+                    },
+                    "target_date_label": {
+                        "type": "string"
+                    },
+                    "responsible_name": {
+                        "type": "string"
+                    },
+                    "responsible_details": {
+                        "type": "string"
+                    },
+                    "leads": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "title",
+                                "name"
+                            ],
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "statuses": {
+                        "type": "object",
+                        "required": [
+                            "overall",
+                            "timeline",
+                            "budget",
+                            "blockers"
+                        ],
+                        "properties": {
+                            "overall": {
+                                "$ref": "#/$defs/status"
+                            },
+                            "timeline": {
+                                "$ref": "#/$defs/status"
+                            },
+                            "budget": {
+                                "$ref": "#/$defs/status"
+                            },
+                            "blockers": {
+                                "$ref": "#/$defs/status"
+                            }
+                        }
+                    },
+                    "accomplishments_title": {
+                        "type": "string"
+                    },
+                    "accomplishments": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "milestones": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/$defs/milestone"
+                        }
+                    },
+                    "risks_title": {
+                        "type": "string"
+                    },
+                    "risks": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "risks_temperature": {
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 100
+                            }
+                        }
+                    },
+                    "assignments_title": {
+                        "type": "string",
+                        "minLength": 2
+                    },
+                    "assignments": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "$ref": "#/$defs/assignment"
+                        }
+                    },
+                    "resolutions_title": {
+                        "type": "string"
+                    },
+                    "resolutions": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "$ref": "#/$defs/resolution"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "$defs": {
+        "status": {
+            "type": "object",
+            "required": [
+                "name",
+                "color"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Human-readable text label."
+                },
+                "color": {
+                    "$ref": "#/$defs/color"
+                }
+            }
+        },
+        "color": {
+            "description": "Qualitative visual hint for UIs",
+            "enum": [
+                "green",
+                "yellow",
+                "red"
+            ]
+        },
+        "milestone": {
+            "type": "object",
+            "required": [
+                "name",
+                "stage"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "stage": {
+                    "enum": [
+                        "do",
+                        "doing",
+                        "done"
+                    ]
+                }
+            }
+        },
+        "assignment": {
+            "type": "object",
+            "required": [
+                "summary",
+                "priority"
+            ],
+            "properties": {
+                "summary": {
+                    "type": "string",
+                    "minLength": 2
+                },
+                "priority": {
+                    "type": "object",
+                    "required": [
+                        "level",
+                        "color"
+                    ],
+                    "properties": {
+                        "level": {
+                            "type": "integer",
+                            "description": "Number of days outstanding",
+                            "minimum": 0
+                        },
+                        "color": {
+                            "$ref": "#/$defs/color"
+                        }
+                    }
+                }
+            }
+        },
+        "resolution": {
+            "type": "object",
+            "description": "A notable challenge that has been resolved.",
+            "required": [
+                "summary"
+            ],
+            "properties": {
+                "summary": {
+                    "type": "string",
+                    "minLength": 2
+                }
+            }
+        }
+    }
+}
