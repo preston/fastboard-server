@@ -15,7 +15,7 @@ Then run the latest Fastboard Server build:
 
 ```sh
 # Note you should volume mount your own directory where dashboard files will be saved.
-docker run -it --rm -p 3000:3000 -v ./dashboard_data:/app/data/dashboards \
+docker run -it --rm -p 3000:3000 -v ./data/dashboard:/app/data/dashboards \
     -e "FASTBOARD_SERVER_USERNAME=fastboard" \
     -e "FASTBOARD_SERVER_PASSWORD=password" \
     p3000/fastboard-server:latest
