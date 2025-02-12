@@ -14,6 +14,7 @@ export FASTBOARD_SERVER_PASSWORD="password"
 Then run the latest Fastboard Server build:
 
 ```sh
+# Note the volume mount where dashboard files will be saved.
 $ docker run -it --rm -p 3000:3000 p3000/fastboard-server:latest
 ```
 
