@@ -8,8 +8,8 @@ export class DataValidator {
 
     public ajv;
 
-    static DASHBOARD_DATA_SCHEMA_FILE = path.join(path.dirname(__filename), 'data', 'schemas', 'dashboard.json');
-    static SETTINGS_DATA_SCHEMA_FILE = path.join(path.dirname(__filename), 'data', 'schemas', 'settings.json');
+    static DASHBOARD_DATA_SCHEMA_FILE = path.join(path.dirname(__filename), '..', 'data', 'schemas', 'dashboard.json');
+    static SETTINGS_DATA_SCHEMA_FILE = path.join(path.dirname(__filename), '..', 'data', 'schemas', 'settings.json');
     static DASHBOARD_DATA_SCHEMA = fs.readFileSync(DataValidator.DASHBOARD_DATA_SCHEMA_FILE).toString();
     static SETTINGS_DATA_SCHEMA = fs.readFileSync(DataValidator.SETTINGS_DATA_SCHEMA_FILE).toString();
     public dashboardDataValidator;

@@ -11,6 +11,7 @@ RUN npm install
 # Copy our faster-moving source code and build it.
 COPY tsconfig.json ./
 COPY src src
+COPY data data
 RUN npm run build
 RUN rm -rf src/
 
