@@ -14,8 +14,11 @@ export FASTBOARD_SERVER_PASSWORD="password"
 Then run the latest Fastboard Server build:
 
 ```sh
-# Note the volume mount where dashboard files will be saved.
-$ docker run -it --rm -p 3000:3000 p3000/fastboard-server:latest
+# Note you should volume mount your own directory where dashboard files will be saved.
+docker run -it --rm -p 3000:3000 -v ./dashboard_data:/app/data/dashboards \
+    -e "FASTBOARD_SERVER_USERNAME=fastboard" \
+    -e "FASTBOARD_SERVER_PASSWORD=password" \
+    p3000/fastboard-server:latest
 ```
 
 # Developer Quickstart
@@ -23,25 +26,25 @@ $ docker run -it --rm -p 3000:3000 p3000/fastboard-server:latest
 ## Running From Source
 
 ```sh
-$ npm i # to install dependencies
-$ npm run start # to run normally, or
-$ npm run watch # to automatically restart upon code changes
+npm i # to install dependencies
+npm run start # to run normally, or
+npm run watch # to automatically restart upon code changes
 ```
 
 ## Testing From Source
 
 ```sh
-$ npm run test # to run once, or
-$ npm run test-watch # to automatically rerun tests upon code or test changes
+npm run test # to run once, or
+npm run test-watch # to automatically rerun tests upon code or test changes
 ```
 
 
 ## Building
 
 ```sh
-$ docker build -t p3000/fastboard-server:latest . # Local CPU architecture only
+docker build -t p3000/fastboard-server:latest . # Local CPU architecture only
 # ..or..
-$ docker buildx build --platform linux/arm64/v8,linux/amd64 -t p3000/fastboard-server:latest . --push # Multi-architecture
+docker buildx build --platform linux/arm64/v8,linux/amd64 -t p3000/fastboard-server:latest . --push # Multi-architecture
 ```
 
 ## License
