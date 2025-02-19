@@ -64,8 +64,8 @@ app.get('/dashboards', (req, res) => {
             let json = JSON.parse(raw);
             let meta = {
                 "id": file,
-                "dashboard_name": json.dashboard_name,
-                "updated_at": json.updated_at
+                "name": json.name,
+                "updated_stamp": json.updated_stamp
             };
             response.dashboards.push(meta);
         } catch (error) {

@@ -7,7 +7,7 @@
     "required": [
         "name",
         "id",
-        "updated_at",
+        "updated_stamp",
         "workstreams"
     ],
     "properties": {
@@ -32,7 +32,7 @@
             "description": "The system-wide unique identifier, preferably a UUIDv4.",
             "minLength": 1
         },
-        "updated_at": {
+        "updated_stamp": {
             "type": "string",
             "description": "Human-readable date string."
         },
