@@ -5,8 +5,8 @@
     "description": "The data schema definitions for Fastboard data files.",
     "type": "object",
     "required": [
-        "dashboard_name",
-        "file_name",
+        "name",
+        "id",
         "updated_at",
         "workstreams"
     ],
@@ -22,14 +22,14 @@
                 }
             }
         },
-        "dashboard_name": {
+        "name": {
             "type": "string",
             "description": "The top-level document name.",
             "minLength": 1
         },
-        "file_name": {
+        "id": {
             "type": "string",
-            "description": "The preferred file name.",
+            "description": "The system-wide unique identifier, preferably a UUIDv4.",
             "minLength": 1
         },
         "updated_at": {
