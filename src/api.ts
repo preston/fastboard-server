@@ -52,12 +52,7 @@ app.get('/schemas/settings.json', (req, res) => {
     res.status(200).send(fs.readFileSync(DataValidator.SETTINGS_DATA_SCHEMA_FILE));
 });
 
-// Requires authentication for all routes below this point.
-const users: { [key: string]: string } = {};
-users[process.env.FASTBOARD_SERVER_USERNAME as string] = process.env.FASTBOARD_SERVER_PASSWORD as string;
-const auth = basicAuth({ users: users });
-
-app.get('/dashboards', auth, (req, res) => {
+app.get('/dashboards', (req, res) => {
     const response: any =
     {
         "dashboards": []
@@ -81,7 +76,7 @@ app.get('/dashboards', auth, (req, res) => {
     res.json(response);
 });
 
-app.get('/dashboards/:id', auth, (req, res) => {
+app.get('/dashboards/:id', (req, res) => {
     try {
         const data = fs.readFileSync(path.join(dashboards_directory_path, req.params.id));
         res.status(200).send(data);
@@ -93,6 +88,12 @@ app.get('/dashboards/:id', auth, (req, res) => {
 
     }
 });
+
+
+// Requires authentication for all routes below this point.
+const users: { [key: string]: string } = {};
+users[process.env.FASTBOARD_SERVER_USERNAME as string] = process.env.FASTBOARD_SERVER_PASSWORD as string;
+const auth = basicAuth({ users: users });
 
 app.post('/dashboards/:id', auth, (req, res) => {
     console.log('POST /dashboards/' + req.params.id);
