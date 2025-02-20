@@ -1,6 +1,6 @@
 # Fastboard Server
 
-Fastboard Server is an optional backend persistence layer for the Fastboard web application. It allows for saving of files and team collaboration via a centralized data store.
+Fastboard Server is an optional backend persistence layer for the Fastboard UI web application. It allows for saving of files and team collaboration via a centralized data store.
 
 # Running with Docker/Podman/Kubernetes
 
@@ -11,11 +11,12 @@ export FASTBOARD_SERVER_USERNAME="fastboard"
 export FASTBOARD_SERVER_PASSWORD="password"
 ```
 
-Then run the latest Fastboard Server build:
+Then run the latest Fastboard Server build with inline variables:
 
 ```sh
 # Note you should volume mount your own directory where dashboard files will be saved.
-docker run -it --rm -p 3000:3000 -v ./data/dashboard:/app/data/dashboards \
+mkdir -p ./data/dashboards
+docker run -it --rm -p 3000:3000 -v ./data/dashboards:/app/build/data/dashboards \
     -e "FASTBOARD_SERVER_USERNAME=fastboard" \
     -e "FASTBOARD_SERVER_PASSWORD=password" \
     p3000/fastboard-server:latest
@@ -37,7 +38,6 @@ npm run watch # to automatically restart upon code changes
 npm run test # to run once, or
 npm run test-watch # to automatically rerun tests upon code or test changes
 ```
-
 
 ## Building
 
