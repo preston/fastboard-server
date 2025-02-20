@@ -30,7 +30,7 @@ app.use(cors());
 let validator = new DataValidator();
 const dashboards_directory_path = path.join(__dirname, '..', 'data', 'dashboards');
 if (!fs.existsSync(dashboards_directory_path)) {
-    console.log('Creating empty data directory at ' + dashboards_directory_path);    
+    console.log('Creating empty data directory at ' + dashboards_directory_path);
     fs.mkdirSync(dashboards_directory_path);
 }
 
@@ -58,12 +58,12 @@ app.get('/dashboards', (req, res) => {
         "dashboards": []
     }
     const base_path = path.join(dashboards_directory_path);
-    fs.readdirSync(base_path).forEach(file => {
+    fs.readdirSync(base_path).filter((fn) => { return fn.endsWith('.json') }).forEach(file => {
         let raw = fs.readFileSync(path.join(base_path, file)).toString();
         try {
             let json = JSON.parse(raw);
             let meta = {
-                "id": file,
+                "id": json.id,
                 "name": json.name,
                 "updated_stamp": json.updated_stamp
             };
@@ -78,7 +78,7 @@ app.get('/dashboards', (req, res) => {
 
 app.get('/dashboards/:id', (req, res) => {
     try {
-        const data = fs.readFileSync(path.join(dashboards_directory_path, req.params.id));
+        const data = fs.readFileSync(path.join(dashboards_directory_path, req.params.id + '.json'));
         res.status(200).send(data);
         console.log('GET /dashboards/' + req.params.id);
     } catch (error) {
@@ -108,7 +108,7 @@ app.post('/dashboards/:id', auth, (req, res) => {
             res.status(400).json({ errors: errors });
         } else {
             console.log('Validation passed.');
-            const file_path = path.join(dashboards_directory_path, req.params.id);
+            const file_path = path.join(dashboards_directory_path, req.params.id + '.json');
             console.log('Writing to ' + file_path);
             try {
                 fs.writeFileSync(file_path, JSON.stringify(json, null, "\t"));
@@ -126,7 +126,7 @@ app.post('/dashboards/:id', auth, (req, res) => {
 
 app.delete('/dashboards/:id', auth, (req, res) => {
     try {
-        const file_path = path.join(dashboards_directory_path, req.params.id);
+        const file_path = path.join(dashboards_directory_path, req.params.id + '.json');
         console.log('Deleting ' + file_path);
         const data = fs.unlinkSync(file_path);
         res.status(200).send(data);
