@@ -78,7 +78,7 @@ app.get('/dashboards', (req, res) => {
 
 app.get('/dashboards/:id', (req, res) => {
     try {
-        const data = fs.readFileSync(path.join(dashboards_directory_path, req.params.id + '.json'));
+        const data = fs.readFileSync(path.join(dashboards_directory_path, req.params.id));
         res.status(200).send(data);
         console.log('GET /dashboards/' + req.params.id);
     } catch (error) {
