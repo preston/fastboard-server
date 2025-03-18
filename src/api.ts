@@ -58,7 +58,7 @@ app.get('/dashboards', (req, res) => {
         "dashboards": []
     }
     const base_path = path.join(dashboards_directory_path);
-    fs.readdirSync(base_path).filter((fn) => { return fn.endsWith('.json') }).forEach(file => {
+    fs.readdirSync(base_path).filter((fn) => { return true /*fn.endsWith('.json')*/ }).forEach(file => {
         let raw = fs.readFileSync(path.join(base_path, file)).toString();
         try {
             let json = JSON.parse(raw);
@@ -108,7 +108,7 @@ app.post('/dashboards/:id', auth, (req, res) => {
             res.status(400).json({ errors: errors });
         } else {
             console.log('Validation passed.');
-            const file_path = path.join(dashboards_directory_path, req.params.id + '.json');
+            const file_path = path.join(dashboards_directory_path, req.params.id);
             console.log('Writing to ' + file_path);
             try {
                 fs.writeFileSync(file_path, JSON.stringify(json, null, "\t"));
@@ -126,7 +126,7 @@ app.post('/dashboards/:id', auth, (req, res) => {
 
 app.delete('/dashboards/:id', auth, (req, res) => {
     try {
-        const file_path = path.join(dashboards_directory_path, req.params.id + '.json');
+        const file_path = path.join(dashboards_directory_path, req.params.id);
         console.log('Deleting ' + file_path);
         const data = fs.unlinkSync(file_path);
         res.status(200).send(data);
