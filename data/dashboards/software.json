@@ -1,7 +1,7 @@
 {
 	"$schema": "https://fastboard.skycapp.com/assets/schemas/dashboard.json",
 	"name": "AcmeCo2",
-	"id": "software",
+	"id": "software.json",
 	"updated_stamp": "2028-08-08",
 	"settings": {
 		"editable": true
