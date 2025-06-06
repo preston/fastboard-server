@@ -1,6 +1,6 @@
 {
     "name": "fastboard-server",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Fastboard Server API and utilities.",
     "scripts": {
         "start": "npm run build && npx node build/server.js",
