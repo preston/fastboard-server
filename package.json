@@ -1,6 +1,6 @@
 {
     "name": "fastboard-server",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Fastboard Server API and utilities.",
     "scripts": {
         "start": "npm run build && npx node build/server.js",
@@ -25,7 +25,7 @@
     "homepage": "https://github.com/p3000/fastboard-server#readme",
     "dependencies": {
         "ajv": "^8.17.1",
-        "axios": "^1.9.0",
+        "axios": "^1.10.0",
         "cors": "^2.8.5",
         "dotenv": "^16.5.0",
         "express": "^5.1.0",
@@ -34,16 +34,16 @@
         "nodemon": "^3.1.10",
         "rxjs": "^7.8.2",
         "supertest": "^7.1.1",
-        "ts-jest": "^29.3.4",
+        "ts-jest": "^29.4.0",
         "ts-node": "^10.9.2",
         "typescript": "^5.8",
         "uuid": "^11.1.0"
     },
     "devDependencies": {
-        "@types/cors": "^2.8.18",
-        "@types/express": "^5.0.2",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.3",
         "@types/fhir": "^0.0.41",
-        "@types/jest": "^29.5.14",
+        "@types/jest": "^30.0.0",
         "@types/uuid": "^10.0.0"
     }
 }
